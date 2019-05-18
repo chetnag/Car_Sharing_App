@@ -1,0 +1,90 @@
+<!--splashscreen code-->
+
+
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="src\assets\icon\Screenshot (36).png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+<ion-content fullscreen>
+
+  <div class="bg">
+    <ion-grid>
+      <ion-card color="tertiary" class="ioncard_bg">
+        <ion-col>
+
+          <!--ioncard heading-->
+          <ion-card-header>
+            <div class="head" text-center>
+              <h1><b>MyRide.com</b></h1>
+            </div>
+          </ion-card-header>
+
+          <div class="inputs">
+            <!--firstname-->
+            <ion-row>
+              <ion-item lines="none">
+                <ion-label>First Name&nbsp;<label class="mandatory-indicator">*</label></ion-label>
+                <ion-input class="placeholder-text" required type="text" placeholder="FirstName" maxlength="15"
+                  [(ngModel)]="todo.name"></ion-input>
+              </ion-item>
+            </ion-row>
+            <!--lastname-->
+            <ion-row>
+              <ion-item lines="none">
+                <ion-label>Last name&nbsp;<label class="mandatory-indicator">*</label></ion-label>
+                <ion-input class="placeholder-text" required type="text" name="" placeholder="LastName" maxlength="15"
+                  [(ngModel)]="todo.lastName">
+                </ion-input>
+              </ion-item>
+            </ion-row>
+
+            <!--gender-->
+            <ion-row>
+              <ion-item lines="none">
+                <ion-label>Gender</ion-label>
+                <ion-select placeholder="" id="gender" [(ngModel)]="todo.gender">
+                  <ion-select-option value="female">Female</ion-select-option>
+                  <ion-select-option value="male">Male</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-row>
+            <!--email-->
+            <ion-row>
+              <ion-item lines="none">
+                <ion-label>E-mail&nbsp;<label class="mandatory-indicator">*</label></ion-label>
+                <ion-input class="placeholder-text" required type="text" maxlength="26" name="" placeholder="example@gmail.com"
+                  size="20" [(ngModel)]="todo.email">
+                </ion-input>
+              </ion-item>
+            </ion-row>
+            <!--mobile-->
+            <ion-row>
+              <ion-item lines="none">
+                <ion-label>Mobile&nbsp;<label class="mandatory-indicator">*</label></ion-label>
+                <ion-input class="placeholder-text" autofocus required type="tel" maxlength="10" required placeholder="mobile"
+                  [(ngModel)]="todo.mobile"></ion-input>
+              </ion-item>
+            </ion-row>
+            <!-- 
+            <ion-row>
+                <ion-input class="placeholder-text" required type="text" maxlength="26" name="" placeholder="example@gmail.com"
+                size="20" [(ngModel)]="todo.email"></ion-input>
+              <ion-button name="" (click)="print(task.$key,todo.email)" shape="rounded"><b>show</b></ion-button>
+              {{todo.gmail}}
+            </ion-row>
+ -->
+            <!--login button-->
+            <ion-row>
+              <ion-button name="" value="Login" (click)="saveTodo()" shape="rounded"><b>LOGIN</b></ion-button>
+            </ion-row>
+
+          </div>
+        </ion-col>
+      </ion-card>
+
+    </ion-grid>
+  </div>
+</ion-content>

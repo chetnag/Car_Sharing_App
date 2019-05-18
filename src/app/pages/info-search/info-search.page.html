@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/info-post"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header">OFFER RIDE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_class" padding fullscreen>
+  <div class="info_bg">
+
+    <ion-item lines="none">
+      <ion-col>
+        <ion-row>
+          <ion-searchbar id="start" [(ngModel)]="post.start" [(ngModel)]="dec1" [(ngModel)]="autocomplete.input"
+            (ionInput)="updateSearchResults()" placeholder="Search for Source" [showCancelButton]="shouldShowCancel"></ion-searchbar>
+        </ion-row>
+
+        <ion-row>
+          <ion-list [hidden]="autocompleteItems.length == 0">
+            <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+              {{ item.description }}
+            </ion-item>
+          </ion-list>
+        </ion-row>
+      </ion-col>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-col>
+        <ion-row>
+          <ion-searchbar id="dest" [(ngModel)]="post.end" [(ngModel)]="dec2" [(ngModel)]="autocomplete2.input"
+            (ionInput)="updateSearchResults2()" placeholder="Search for destination" [showCancelButton]="shouldShowCancel"></ion-searchbar>
+        </ion-row>
+
+        <ion-row>
+          <ion-list [hidden]="autocompleteItems2.length == 0">
+            <ion-item *ngFor="let item of autocompleteItems2" tappable (click)="selectSearchResult2(item)">
+              {{ item.description }}
+            </ion-item>
+          </ion-list>
+        </ion-row>
+      </ion-col>
+    </ion-item>
+    <!--  
+    <ion-item lines="none">
+      <ion-button class="sdes" color="white" expands="full" routerLink="/map"><b>Choose Source and Destination</b></ion-button>
+    </ion-item>
+-->
+<ion-item lines="none">
+    <ion-label>name&nbsp;</ion-label>
+    <ion-input class="placeholder-text" requiredrequired type="text" placeholder="Name" [(ngModel)]="post.name"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label>mobile&nbsp;</ion-label>
+    <ion-input class="placeholder-text" required required type="tel" placeholder="Mobile" [(ngModel)]="post.mobile"></ion-input>
+  </ion-item>
+    <ion-item lines="none">
+      <ion-label>Source&nbsp;</ion-label>
+      <ion-input class="placeholder-text" requiredrequired type="text" placeholder="Source Location" [(ngModel)]="post.start"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Destination&nbsp;</ion-label>
+      <ion-input class="placeholder-text" required required type="text" placeholder="Destination" [(ngModel)]="post.end"></ion-input>
+    </ion-item>
+
+    <ion-item required lines="none">
+      <ion-label>date&nbsp;</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="post.date"></ion-datetime>
+
+   </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Time&nbsp;</ion-label>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="post.time"></ion-datetime>
+ </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Vehicle Number&nbsp;</ion-label>
+      <ion-input class="placeholder-text" required required type="number" placeholder="Vehicle Number" [(ngModel)]="post.vehical"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Number of Seats&nbsp;</ion-label>
+      <ion-input class="placeholder-text" required required type="number" placeholder="Seats Available" [(ngModel)]="post.seat"></ion-input>
+    </ion-item>
+
+
+    <ion-button class="save" color="white" expands="full" (click)="savePost()"><b>SAVE</b></ion-button>
+  </div>
+</ion-content>

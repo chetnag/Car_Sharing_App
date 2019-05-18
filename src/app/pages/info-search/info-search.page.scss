@@ -1,0 +1,129 @@
+div{
+  //  background-color: #c2b64e;
+  //  background-size: cover;
+    //background: linear-gradient(160deg,#e2e2e2e8 30%,#635e5e 70%);
+    width: 100%!important;
+    background-size: cover!important;
+    margin: 0%;
+    padding: 0%;
+    height: 100%!important;
+}
+.inputs{
+    position: absolute;
+    display: block;
+    top: 55%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ width: 80%;
+ color: black;
+ opacity: 0.6;
+ text-size-adjust: ion-label;
+ }
+ .info_bg{
+    background-size: cover!important;
+    height: 100%!important;width: 100%!important;
+ ion-item {
+  // background: transparent!important;
+  --background: transparent;
+ 
+ --ion-color-base: transparent !important;
+   //border-color: rgba(0, 0, 0, 0)!important;
+ //	background-color: rgba(0, 0, 0, 0)!important;
+   //border: 2px solid white!important;
+     ion-input {
+         color:black;
+     }
+     ion-label {
+         color:black!important;
+     }
+     .item-inner {
+         border: 0!important;
+     }
+ }
+}
+.sdes{
+  background: #368cfc!important;
+  //border: 15px;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+// size:100%;
+    box-sizing: border-box;
+width: 100%;
+border: solid #4493fa 2px;
+
+    color:white!important;
+  display: block;
+   position: relative;
+   
+ 
+    font-size: 15px;
+}
+.save
+{
+  background: #368cfc!important;
+  //border: 15px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+ 
+    
+  box-sizing: border-box;
+  width: 20%;
+  border: solid #3f92ff 2px;
+    color:#fcfcfc!important;
+   
+    font-size: 15px;
+    position: relative;
+    //padding-top: 5px;
+     
+     // padding-left: 20px;
+     top:10%;
+     left:40%;
+     right:35% ;
+      //margin-top: 50px;
+}
+
+ion-button:click{
+  border:2px solid #85afe6;
+}
+
+
+
+
+.header{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+}
+
+
+.placeholder-text{
+
+  font-size: 1.0em;
+  font-weight: 100;
+  font-family: 'Courier New', Courier, monospace;
+  
+  }
+.bg_class{
+  --ion-background-color: #e4eaf7!important;
+  //    --background: linear-gradient(180deg,#edf2fc 30%, rgb(182, 207, 245) 70%) !important;
+    color:white;
+}
+
+.placeholder-text{
+
+  font-size: 1.0em;
+  font-weight: 80;
+  font-family:monospace;
+  padding-top:7px;
+  
+  }
+  ion-searchBar{
+  
+    border-left: 3px solid #368cfc;
+background-origin: shadow 20px #0c229e;
+//border-top: 5px solid #0059ff; 
+  }
+ 

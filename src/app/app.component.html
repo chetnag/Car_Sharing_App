@@ -1,0 +1,40 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header no-border class="menu_header">   
+        
+        <!--
+          <div class="custom"> 
+        <ion-toolbar color="tertiary" class="img">
+          <ion-title>
+          
+            <ion-row>   
+             
+                  <img src="assets/icon/person.png" class="logo-size" alt="logo">&nbsp;
+             
+
+           
+          </ion-row> 
+        </ion-title>
+        </ion-toolbar>
+      </div> -->
+      </ion-header>
+      <ion-content no-border>
+          <div style = "color : rgb(234, 244, 245); width:100%; height : 100%">
+     
+        <ion-list lines="none">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

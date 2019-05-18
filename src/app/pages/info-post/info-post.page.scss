@@ -1,0 +1,65 @@
+.fake-skeleton{
+    width: 60%;
+}
+/*
+#button{
+    size: 20px;
+    shape-margin: 200px;
+    resize: 200px;
+    
+}
+ion-fab-button{
+    text-decoration-color: rosybrown;
+   // position: absolute;
+    background-position-x: 200px;
+    background-position-y: 200px;
+    object-position: 200;
+}
+ion-fab [right][bottom][edge] {
+    bottom: -5vh;
+    right: -5vh;
+    
+  }
+  ion-fab {
+    position:relative;
+    left: 92%;
+    top: 88%;
+    color:white;
+    
+  }
+  .fab {
+      
+  }
+*/
+ion-fab{
+    color: #ffffff;
+    //background: black;
+}
+.save
+{
+  background: #368cfc!important;
+  //border: 15px;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+ 
+    
+  box-sizing: border-box;
+  width: 20%;
+  border: solid #3f92ff 2px;
+    color:#fcfcfc!important;
+   
+    font-size: 15px;
+    position: relative;
+    //padding-top: 5px;
+     
+     // padding-left: 20px;
+     top:40%;
+     left:40%;
+     right:35% ;
+      margin-top: 50px;
+}
+
+ion-button:click{
+  border:2px solid #85afe6;
+}

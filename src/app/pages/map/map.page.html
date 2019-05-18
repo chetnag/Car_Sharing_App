@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" vertical="top" horizontal="start">
+      <ion-back-button defaultHref="/info-post"></ion-back-button>
+    </ion-buttons>
+
+    <ion-searchbar id="start" [(ngModel)]="dec1" [(ngModel)]="autocomplete.input" (ionInput)="updateSearchResults()"
+      placeholder="Search for Source" [showCancelButton]="shouldShowCancel"></ion-searchbar>
+
+    <ion-list [hidden]="autocompleteItems.length == 0">
+      <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+        {{ item.description }}
+      </ion-item>
+    </ion-list>
+
+    <ion-searchbar id="dest" [(ngModel)]="dec2" [(ngModel)]="autocomplete2.input" (ionInput)="updateSearchResults()"
+      placeholder="Search for destination" [showCancelButton]="shouldShowCancel"></ion-searchbar>
+
+    <ion-list [hidden]="autocompleteItems2.length == 0">
+      <ion-item *ngFor="let item of autocompleteItems2" tappable (click)="selectSearchResult2(item)">
+        {{ item.description }}
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="path" color="tertiary" style="font-weight: bold; font-size: 15px;"
+      (click)="calculateAndDisplayRoute()">path</ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id='map'></div>
+
+  <ion-list [hidden]="autocompleteItems.length == 0">
+    <ion-item *ngFor="let item of autocompleteItems" tappable (click)="selectSearchResult(item)">
+      {{ item.description }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
