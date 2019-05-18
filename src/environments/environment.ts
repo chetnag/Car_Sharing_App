@@ -7,12 +7,12 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: "AIzaSyDuaYRxJl-I18gStHUGXwRym0GP8ghTKGY",
+    apiKey: "AIzaSyDuaY........................",
     authDomain: "carpooling-bc275.firebaseapp.com",
     databaseURL: "https://carpooling-bc275.firebaseio.com",
     projectId: "carpooling-bc275",
     storageBucket: "",
-    messagingSenderId: "153015350920"
+    messagingSenderId: "15301......."
   }
   
 };
