@@ -1,6 +1,6 @@
 # Car_Sharing_App 
 
-(An andriod application built in Ionic using NodeJS, JavaScript, angularJS)
+(An android application built in Ionic using NodeJS, JavaScript, angularJS)
 Firebase Real-time Database is cloud-hosted database used in the app to store & sync data.
 
 To run the application:
